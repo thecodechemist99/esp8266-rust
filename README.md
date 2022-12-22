@@ -6,7 +6,7 @@ This package is based on the current versions of the included dependencies (as o
 | ------------- | --------- | ----------------------------------------------------------------------------------------------- |
 | esp8266-hal   | `v0.5.1`  |                                                                                                 |
 | esp32-hal     | `v0.7.0`  |                                                                                                 |
-| esp-backtrace | `v0.4.0`  | not currently used, but included for future ESP32 support                                       |
+| esp-backtrace | `v0.4.0`  | only used for ESP32, no ESP8266 support                                                         |
 | esp-println   | `v0.3.1`  |                                                                                                 |
 | xtensa-lx-rt  | `v0.14.0` |                                                                                                 |
 | panic-halt    | `v0.2.0`  | currently necessary as esp-backtrace doesn't support ESP8266, the latter is preferred for ESP32 |
@@ -31,7 +31,7 @@ cargo espflash --release --monitor /dev/<USB device>
 You need to have `cargo-espflash` installed for this to work.
 
 ## TODO
-- ESP32 config included from sources but not checked yet.
+- ESP32 config not checked yet
 
 ## Sources
 This project is based upon:
