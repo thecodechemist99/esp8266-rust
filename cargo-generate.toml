@@ -9,5 +9,5 @@ ignore = [
 [placeholders.mcu]
 type    = "string"
 prompt  = "Which MCU to target?"
-choices = ["esp8266", "esp32"]
+choices = ["esp32", "esp8266"]
 default = "esp32"
