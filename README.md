@@ -24,7 +24,11 @@ cargo install cargo-generate
 cargo generate --git https://github.com/thecodechemist99/esp8266-rust
 ```
 
-To test your setup and later compile and flash your code, run `cargo espflash --release --monitor`. You need to have `cargo-espflash` installed for this to work.
+To test your setup and later compile and flash your code run:
+```
+cargo espflash --release --monitor /dev/<USB device>
+```
+You need to have `cargo-espflash` installed for this to work.
 
 ## TODO
 - ESP32 config included from sources but not checked yet.
