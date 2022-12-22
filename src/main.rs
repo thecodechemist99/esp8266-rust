@@ -39,7 +39,7 @@ fn main() -> ! {
     let mut led = pins.gpio2.into_push_pull_output();
 
     {% if mcu == "esp8266" -%}
-    let (mut timer1, _) = peripherals.TIMER.timers();
+    let (mut timer1, _) = dp.TIMER.timers();
     {% endif %}
 
     loop {
