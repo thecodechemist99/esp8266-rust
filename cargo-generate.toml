@@ -5,3 +5,9 @@ ignore = [
     ".github",
     "README.md",
 ]
+
+[placeholders.mcu]
+type    = "string"
+prompt  = "Which MCU to target?"
+choices = ["esp8266", "esp32"]
+default = "esp32"

@@ -6,19 +6,19 @@ edition = "2021"
 license = "MIT OR Apache-2.0"
 
 [dependencies]
-esp8266-hal = { version = "0.5.1", optional = true}
-esp32-hal = { version = "0.7.0", optional = true }
-esp-backtrace = { version = "0.4.0", features = ["esp32", "panic-handler", "print-uart"], optional = true }
-# esp-println = { version = "0.3.1", features = ["esp32"]}
-esp-println = { version = "0.3.1", features = ["esp8266"]}
+{% if mcu == "esp32" -%}
+{{ mcu }}-hal = { version = "0.7.0", optional = true }
+esp-backtrace = { version = "0.4.0", features = ["{{ mcu }}", "panic-handler", "print-uart"], optional = true }
+{% else -%}
+{{ mcu }}-hal = { version = "0.5.1", optional = true}
 
-# xtensa-lx-rt = { version = "0.14.0", features = ["esp32"], optional = true}
-xtensa-lx-rt = { version = "0.14.0", features = ["esp8266"], optional = true}
+esp-println = { version = "0.3.1", features = ["{{ mcu }}"]}
+xtensa-lx-rt = { version = "0.14.0", features = ["{{ mcu }}"], optional = true}
 
 panic-halt = "0.2.0"
 
 [features]
-default = ["xtensa-lx-rt", "esp8266-hal"]
+default = ["xtensa-lx-rt", "{{ mcu }}-hal"]
 
 [profile.dev.package.xtensa-lx-rt]
 opt-level = 'z'
