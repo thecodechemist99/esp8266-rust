@@ -16,7 +16,7 @@ xtensa-lx-rt = { version = "0.14.0", features = ["{{ mcu }}"], optional = true}
 panic-halt = "0.2.0"
 
 [features]
-default = ["xtensa-lx-rt", "{{ mcu }}-hal"]
+default = ["xtensa-lx-rt", "{{ mcu }}-hal", "esp-backtrace"]
 
 [profile.dev.package.xtensa-lx-rt]
 opt-level = 'z'
