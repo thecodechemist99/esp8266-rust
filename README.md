@@ -14,8 +14,17 @@ This package is based on the current versions of the included dependencies (as o
 ## Toolchain Setup
 The toolchain files and setup instructions from Espressif can be found [here](https://docs.espressif.com/projects/esp8266-rtos-sdk/en/latest/get-started/linux-setup.html).
 
-## Running
-To test your setup and later compile and flash your code, run `cargo espflash --release --monitor`.
+## Create your Project
+You can create a project from this template with `cargo-generate`:
+```
+# if not yet installed
+cargo install cargo-generate
+
+# create from template
+cargo generate --git https://github.com/thecodechemist99/esp8266-rust
+```
+
+To test your setup and later compile and flash your code, run `cargo espflash --release --monitor`. You need to have `cargo-espflash` installed for this to work.
 
 ## TODO
 - ESP32 config included from sources but not checked yet.
