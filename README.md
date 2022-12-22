@@ -31,7 +31,7 @@ cargo espflash --release --monitor /dev/<USB device>
 You need to have `cargo-espflash` installed for this to work.
 
 ## TODO
-- ESP32 config not checked yet
+- ESP32 config not checked on physical device yet (works in simulator)
 
 ## Sources
 This project is based upon:
