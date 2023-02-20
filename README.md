@@ -1,14 +1,14 @@
 # Basic Template for ESP8266 projects in rust
-This package is based on the current versions of the included dependencies (as of 2022-12-22).
+This package is based on the current versions of the included dependencies (as of 2023-02-20).
 
 ## Dependency versions
 | Dependency    | Version   | Notes                                                                                           |
 | ------------- | --------- | ----------------------------------------------------------------------------------------------- |
 | esp8266-hal   | `v0.5.1`  |                                                                                                 |
-| esp32-hal     | `v0.7.0`  |                                                                                                 |
-| esp-backtrace | `v0.4.0`  | only used for ESP32, no ESP8266 support                                                         |
+| esp32-hal     | `v0.8.0`  |                                                                                                 |
+| esp-backtrace | `v0.5.0`  | only used for ESP32, no ESP8266 support                                                         |
 | esp-println   | `v0.3.1`  |                                                                                                 |
-| xtensa-lx-rt  | `v0.14.0` |                                                                                                 |
+| xtensa-lx-rt  | `v0.15.0` |                                                                                                 |
 | panic-halt    | `v0.2.0`  | currently necessary as esp-backtrace doesn't support ESP8266, the latter is preferred for ESP32 |
 
 ## Toolchain Setup
